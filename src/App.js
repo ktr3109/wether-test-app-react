@@ -19,7 +19,7 @@ function App() {
   });
   const getWeather = (e) => {
       e.preventDefault();//リロードを止める。イベント・パラメーター(e)から呼び出し
-      axios.get(`http://api.weatherapi.com/v1/current.json?key=702ef6ddd8024a179c8105943232107&q=${city}&aqi=no`)//都市名データを受けとれるようになる。
+      axios.get(`https://api.weatherapi.com/v1/current.json?key=702ef6ddd8024a179c8105943232107&q=${city}&aqi=no`)//都市名データを受けとれるようになる。
           .then(res => {
             setResults({//APIの中を確認。入れ子構造に沿う形でdataから.をつけて記述
               country: res.data.location.country,
